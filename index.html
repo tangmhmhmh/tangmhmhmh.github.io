@@ -303,7 +303,37 @@
       
         
           
-            
+            <h1 id="matplotlib常用命令总结"><a href="#matplotlib常用命令总结" class="headerlink" title="matplotlib常用命令总结"></a>matplotlib常用命令总结</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">18</span>, <span class="number">16</span>), dpi=<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+
+<p>打开一个新的图片，尺寸1800*1600像素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.style.use(<span class="string">'ggplot'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用“ggplot”风格（个人感觉很好看的一种风格）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'savefig.dpi'</span>] = <span class="number">500</span></span><br></pre></td></tr></table></figure>
+
+<p>设置分辨率为500</p>
+<p>在输出为svg格式时没有什么用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p>用来正常显示负号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>用来正常显示中文标签，linux和Windows有所不同</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.suptitle(<span class="string">"NGSIM跟车数据举例"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>图像总标题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplots_adjust(wspace=<span class="number">0.2</span>, hspace=<span class="number">0.4</span>)</span><br></pre></td></tr></table></figure>
+
+<p>调整子图间距</p>
+<h2 id="矢量图生成"><a href="#矢量图生成" class="headerlink" title="矢量图生成"></a>矢量图生成</h2><p>工具：Inkscape</p>
+<p>步骤：</p>
+<ol>
+<li>导出svg格式文件</li>
+<li>用Inkscape打开</li>
+<li>另存为emf格式图片</li>
+<li>插入到需要的地方</li>
+</ol>
+
           
         
       
