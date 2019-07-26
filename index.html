@@ -262,6 +262,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/公式测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="唐明弘">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没什么技术的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/26/公式测试/" itemprop="url">公式测试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-26T22:34:59+08:00">
+                2019-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="math/tex; mode=display">
+a=f(x)</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/hexo-github搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -367,15 +487,12 @@
 <p>注意：安装中直接一路next就好了，注意添加到系统目录</p>
 <h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>打开git bash ,安装hexo，安装命令：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo</span><br></pre></td></tr></table></figure>
-
 <p>进入目标文件夹，初始化，命令：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
 <p>或在上一级文件夹初始化：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> <span class="string">"文件夹名称"</span></span><br></pre></td></tr></table></figure>
-
 <p>初始化之后博客文件夹里出现了很多文件夹和文件：</p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/%E6%96%87%E4%BB%B6%E5%A4%B9.PNG" alt="文件夹"></p>
+<p><img src="/2019/07/26/hexo-github搭建个人博客/文件夹.PNG" alt="文件夹"></p>
 <ol>
 <li>node_modules：是依赖包</li>
 <li>public：存放的是生成的页面</li>
@@ -400,17 +517,34 @@
 <p>在gitbash中验证是否添加成功：<code>ssh -T git@github.com</code></p>
 <h2 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h2><p>用编辑器打开你的blog项目，修改<code>_config.yml</code>文件的一些配置(冒号之后都是有一个半角空格的)：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
 <p>回到gitbash中，进入你的blog目录，分别执行以下命令：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
 <p>注：hexo 3.0把服务器独立成个别模块，需要单独安装：<code>npm i hexo-server</code></p>
 <h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><p>先安装一波：<code>npm install hexo-deployer-git --save</code>（这样才能将你写好的文章部署到github服务器上并让别人浏览到）</p>
 <p>执行命令(建议每次都按照如下步骤部署)：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>在浏览器中输入<code>http://yourgithubname.github.io</code>就可以看到你的个人博客啦，是不是很兴奋！</p>
 <h1 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h1><p>个性化配置可选项很多，这里想到什么就说什么了</p>
+<h2 id="正常渲染公式"><a href="#正常渲染公式" class="headerlink" title="正常渲染公式"></a>正常渲染公式</h2><ol>
+<li><p>更新公式选然引擎</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置文件</p>
+<p>目标文件：<strong>node_modules\kramed\lib\rules\inline.js</strong></p>
+<p>第11行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">  <span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span></span><br></pre></td></tr></table></figure>
+<p>第20行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">  em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在主题中打开mathjax开关</p>
+<p>找到具体theme的<strong>_config.yml</strong>文件，把mathjax的false改成true</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后一步：</p>
+<p>每次需要用到公式时需要在文章开头打开mathjax开关：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">index.html</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-12</span><span class="bullet">-28</span> <span class="number">21</span><span class="string">:01:30</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h2><p>添加头像是需要在具体theme中操作的，因此首先需要切换到具体theme文件夹中，整个过程分三步：</p>
 <ol>
 <li><p>将头像放在<strong>./theme/具体theme/source/image/</strong>目录下，例如图像名为head.jpg</p>
@@ -420,7 +554,6 @@
 </li>
 <li><p>修改<strong>\themes\next\source\css_common\components\header</strong>下的header.styl中的第一行：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.header &#123; background: url('../image/header.jpg'); &#125;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <p>最后重新上传，就好了。</p>
@@ -432,13 +565,11 @@
 </li>
 <li><p>修改_config.yml文件中的theme选项</p>
 <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>推荐使用Typora</p>
 <p>新建文章：</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">'文章名'</span></span><br></pre></td></tr></table></figure>
-
 <p>然后你就可以在<code>source/_posts</code>路径下看到你创建的文章啦，编辑完成之后按照前面说的方式部署，在浏览器刷新就能看到你的文章了。</p>
 
           
@@ -561,9 +692,9 @@
           
             <h1 id="测试一下上传图片的功能"><a href="#测试一下上传图片的功能" class="headerlink" title="测试一下上传图片的功能"></a>测试一下上传图片的功能</h1><p><img src="/2019/07/26/图片测测试——1/v2-0cbf5d450d2900ceadad524bcbb60186_r.jpg" alt="v2-0cbf5d450d2900ceadad524bcbb60186_r"></p>
 <p><img src="/2019/07/26/图片测测试——1/v2-3ce476215b9e0c16cb49c37904a604e2_r.jpg" alt="v2-3ce476215b9e0c16cb49c37904a604e2_r"></p>
-<p>$$<br>a=f(x)+g(x)<br>$$</p>
-<p>$$<br>\frac{a}{b}\sum{a}\sum_{n=1}^{100}{a_n}<br>$$</p>
-
+<script type="math/tex; mode=display">
+a=f(x)+g(x)</script><script type="math/tex; mode=display">
+\frac{a}{b}\sum{a}\sum_{n=1}^{100}{a_n}</script>
           
         
       
@@ -683,26 +814,19 @@
         
           
             <h1 id="matplotlib常用命令总结"><a href="#matplotlib常用命令总结" class="headerlink" title="matplotlib常用命令总结"></a>matplotlib常用命令总结</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">18</span>, <span class="number">16</span>), dpi=<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
-
 <p>打开一个新的图片，尺寸1800*1600像素</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.style.use(<span class="string">'ggplot'</span>)</span><br></pre></td></tr></table></figure>
-
 <p>使用“ggplot”风格（个人感觉很好看的一种风格）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'savefig.dpi'</span>] = <span class="number">500</span></span><br></pre></td></tr></table></figure>
-
 <p>设置分辨率为500</p>
 <p>在输出为svg格式时没有什么用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
 <p>用来正常显示负号</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br></pre></td></tr></table></figure>
-
 <p>用来正常显示中文标签，linux和Windows有所不同</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.suptitle(<span class="string">"NGSIM跟车数据举例"</span>)</span><br></pre></td></tr></table></figure>
-
 <p>图像总标题</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplots_adjust(wspace=<span class="number">0.2</span>, hspace=<span class="number">0.4</span>)</span><br></pre></td></tr></table></figure>
-
 <p>调整子图间距</p>
 <h2 id="矢量图生成"><a href="#矢量图生成" class="headerlink" title="矢量图生成"></a>矢量图生成</h2><p>工具：Inkscape</p>
 <p>步骤：</p>
@@ -795,7 +919,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -817,7 +941,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -1037,6 +1161,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
