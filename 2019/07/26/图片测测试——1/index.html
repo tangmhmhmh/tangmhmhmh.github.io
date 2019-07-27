@@ -768,7 +768,7 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: window.location.pathname, 
+            id: decodeURI(window.location.pathname),
             owner: 'tangmhmhmh',
             repo: 'answers',
             
