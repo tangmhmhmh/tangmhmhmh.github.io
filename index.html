@@ -333,9 +333,16 @@
       
         
           
-            <script type="math/tex; mode=display">
-a=f(x)</script>
           
+a=f(x)
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/26/公式测试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -453,11 +460,16 @@ a=f(x)</script>
       
         
           
-            <h1 id="基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型"><a href="#基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型" class="headerlink" title="基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型"></a>基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型</h1><h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><h2 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h2><h2 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li>Lin Y, McPhee J, Azad N L. Longitudinal Dynamic versus Kinematic Models for Car-following Control Using Deep Reinforcement Learning[J]. arXiv preprint arXiv:1905.08314, 2019.</li>
-</ol>
-
-          
+          基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型
+1. Lin Y, McPhee J, Azad N L. Longitudinal Dynamic versus Kinematic Models for Car-following Control Using Deep Reinforceme
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/26/基于深度强化学习的汽车跟踪控制纵向动力学与运动学模型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -608,104 +620,17 @@ a=f(x)</script>
       
         
           
-            <p>转载自<a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/，并加了一些其他东西。" target="_blank" rel="noopener">http://visugar.com/2017/05/04/20170504SetUpHexoBlog/，并加了一些其他东西。</a></p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>前期准备主要时安装三个东西：git bash、NodeJs、hexo</p>
-<h2 id="git-bash安装"><a href="#git-bash安装" class="headerlink" title="git bash安装"></a>git bash安装</h2><p>git bash 直接下载安装即可，下载地址：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a></p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/git.PNG" alt="git"></p>
-<p>一路next就完事了</p>
-<h2 id="NodeJs安装"><a href="#NodeJs安装" class="headerlink" title="NodeJs安装"></a>NodeJs安装</h2><p>Hexo是基于nodeJS环境的静态博客，里面的npm工具很有用啊，所以还是老老实实把这玩意儿装了吧</p>
-<p>下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/NodeJs.PNG" alt="NodeJs"></p>
-<p>LTS为长期支持的版本，Current为最新版本</p>
-<p>注意：安装中直接一路next就好了，注意添加到系统目录</p>
-<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>打开git bash ,安装hexo，安装命令：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo</span><br></pre></td></tr></table></figure>
-<p>进入目标文件夹，初始化，命令：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>或在上一级文件夹初始化：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> <span class="string">"文件夹名称"</span></span><br></pre></td></tr></table></figure>
-<p>初始化之后博客文件夹里出现了很多文件夹和文件：</p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/文件夹.PNG" alt="文件夹"></p>
-<ol>
-<li>node_modules：是依赖包</li>
-<li>public：存放的是生成的页面</li>
-<li>scaffolds：命令生成文章等的模板</li>
-<li>source：用命令创建的各种文章</li>
-<li>themes：主题</li>
-<li>_config.yml：整个博客的配置</li>
-<li>db.json：source解析所得到的</li>
-<li>package.json：项目所需模块项目的配置信息</li>
-</ol>
-<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p>搭建过程主要是三步：</p>
-<p>生成SSH，项目部署，上传到github</p>
-<h2 id="生成SSH并添加到github"><a href="#生成SSH并添加到github" class="headerlink" title="生成SSH并添加到github"></a>生成SSH并添加到github</h2><p>创建一个repo，名称为<code>yourname.github.io</code>, 其中yourname是你的github名称，按照这个规则创建才有用。</p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/github.PNG" alt="github"></p>
-<p>回到gitbash中，配置github账户信息（YourName和YourEail都替换成你自己的）</p>
-<p>创建SSH</p>
-<p>在gitbash中输入：<code>ssh-keygen -t rsa -C &quot;youremail@example.com</code>，生成ssh。然后按下图的方式找到<code>id_rsa.pub</code>文件的内容。</p>
-<p><img src="/2019/07/26/hexo-github搭建个人博客/ssh.PNG" alt="ssh"></p>
-<p>生成的文件在用户根目录下的.ssh文件夹中。</p>
-<p>将上面获取的ssh放到github中：</p>
-<p>用户设置-&gt;SSH and GPG keys-&gt;New SSH key<img src="/2019/07/26/hexo-github搭建个人博客/ssh_key.PNG" alt="ssh_key"></p>
-<p>在gitbash中验证是否添加成功：<code>ssh -T git@github.com</code></p>
-<h2 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h2><p>用编辑器打开你的blog项目，修改<code>_config.yml</code>文件的一些配置(冒号之后都是有一个半角空格的)：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>回到gitbash中，进入你的blog目录，分别执行以下命令：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>注：hexo 3.0把服务器独立成个别模块，需要单独安装：<code>npm i hexo-server</code></p>
-<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><p>先安装一波：<code>npm install hexo-deployer-git --save</code>（这样才能将你写好的文章部署到github服务器上并让别人浏览到）</p>
-<p>执行命令(建议每次都按照如下步骤部署)：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入<code>http://yourgithubname.github.io</code>就可以看到你的个人博客啦，是不是很兴奋！</p>
-<h1 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h1><p>个性化配置可选项很多，这里想到什么就说什么了</p>
-<h2 id="正常渲染公式"><a href="#正常渲染公式" class="headerlink" title="正常渲染公式"></a>正常渲染公式</h2><ol>
-<li><p>更新公式选然引擎</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置文件</p>
-<p>目标文件：<strong>node_modules\kramed\lib\rules\inline.js</strong></p>
-<p>第11行：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">  <span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span></span><br></pre></td></tr></table></figure>
-<p>第20行：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">  em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在主题中打开mathjax开关</p>
-<p>找到具体theme的<strong>_config.yml</strong>文件，把mathjax的false改成true</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>最后一步：</p>
-<p>每次需要用到公式时需要在文章开头打开mathjax开关：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">index.html</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-12</span><span class="bullet">-28</span> <span class="number">21</span><span class="string">:01:30</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h2><p>添加头像是需要在具体theme中操作的，因此首先需要切换到具体theme文件夹中，整个过程分三步：</p>
-<ol>
-<li><p>将头像放在<strong>./theme/具体theme/source/image/</strong>目录下，例如图像名为head.jpg</p>
-</li>
-<li><p>在对应主题文件夹下找配置文件_config.yml，修改avatar:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /images/head.jpg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改<strong>\themes\next\source\css_common\components\header</strong>下的header.styl中的第一行：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.header &#123; background: url('../image/header.jpg'); &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>最后重新上传，就好了。</p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>添加CNAME：在项目的source文件夹下新建一个名为CNAME的文件，在里面添加你购买的域名，比如我添加的是<code>visugar.com</code>，只能添加一个</p>
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>hexo初始化之后默认的主题是<code>landscape</code> , 然后你可以去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">这个地址</a>里面找到你想要的主题。在github中搜索你要的主题名称，里面都会有该主题的如何使用的介绍，按着来就好了，反正就是改改改！。</p>
-<p>修改主题分为两步：</p>
-<ol>
-<li><p>将主题下载到./theme文件夹下</p>
-</li>
-<li><p>修改_config.yml文件中的theme选项</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>推荐使用Typora</p>
-<p>新建文章：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">'文章名'</span></span><br></pre></td></tr></table></figure>
-<p>然后你就可以在<code>source/_posts</code>路径下看到你创建的文章啦，编辑完成之后按照前面说的方式部署，在浏览器刷新就能看到你的文章了。</p>
-
-          
+          转载自http://visugar.com/2017/05/04/20170504SetUpHexoBlog/，并加了一些其他东西。
+前期准备前期准备主要时安装三个东西：git bash、NodeJs、hexo
+git bash安装git bash 直接下载安装即可，下载地址：https://git
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/26/hexo-github搭建个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -823,12 +748,19 @@ a=f(x)</script>
       
         
           
-            <h1 id="测试一下上传图片的功能"><a href="#测试一下上传图片的功能" class="headerlink" title="测试一下上传图片的功能"></a>测试一下上传图片的功能</h1><p><img src="/2019/07/26/图片测测试——1/v2-0cbf5d450d2900ceadad524bcbb60186_r.jpg" alt="v2-0cbf5d450d2900ceadad524bcbb60186_r"></p>
-<p><img src="/2019/07/26/图片测测试——1/v2-3ce476215b9e0c16cb49c37904a604e2_r.jpg" alt="v2-3ce476215b9e0c16cb49c37904a604e2_r"></p>
-<script type="math/tex; mode=display">
-a=f(x)+g(x)</script><script type="math/tex; mode=display">
-\frac{a}{b}\sum{a}\sum_{n=1}^{100}{a_n}</script>
+          测试一下上传图片的功能
+
+
+a=f(x)+g(x)
+\frac{a}{b}\sum{a}\sum_{n=1}^{100}{a_n}
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/26/图片测测试——1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -946,31 +878,19 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
       
         
           
-            <h1 id="matplotlib常用命令总结"><a href="#matplotlib常用命令总结" class="headerlink" title="matplotlib常用命令总结"></a>matplotlib常用命令总结</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">18</span>, <span class="number">16</span>), dpi=<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
-<p>打开一个新的图片，尺寸1800*1600像素</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.style.use(<span class="string">'ggplot'</span>)</span><br></pre></td></tr></table></figure>
-<p>使用“ggplot”风格（个人感觉很好看的一种风格）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'savefig.dpi'</span>] = <span class="number">500</span></span><br></pre></td></tr></table></figure>
-<p>设置分辨率为500</p>
-<p>在输出为svg格式时没有什么用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-<p>用来正常显示负号</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br></pre></td></tr></table></figure>
-<p>用来正常显示中文标签，linux和Windows有所不同</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.suptitle(<span class="string">"NGSIM跟车数据举例"</span>)</span><br></pre></td></tr></table></figure>
-<p>图像总标题</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplots_adjust(wspace=<span class="number">0.2</span>, hspace=<span class="number">0.4</span>)</span><br></pre></td></tr></table></figure>
-<p>调整子图间距</p>
-<h2 id="矢量图生成"><a href="#矢量图生成" class="headerlink" title="矢量图生成"></a>矢量图生成</h2><p>工具：Inkscape</p>
-<p>步骤：</p>
-<ol>
-<li>导出svg格式文件</li>
-<li>用Inkscape打开</li>
-<li>另存为emf格式图片</li>
-<li>插入到需要的地方</li>
-</ol>
-
-          
+          matplotlib常用命令总结1plt.figure(figsize=(18, 16), dpi=100)
+打开一个新的图片，尺寸1800*1600像素
+1plt.style.use('ggplot')
+使用“ggplot”风格（个人感觉很好看的一种风格）
+1plt.rcParams['savef
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/26/画图记录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1062,10 +982,10 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -1073,10 +993,10 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">4</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -1084,6 +1004,22 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/tangmhmhmh" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:tangmh_2017@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -1100,6 +1036,19 @@ a=f(x)+g(x)</script><script type="math/tex; mode=display">
       
 
       
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <h3 class="widget-title">Tag Cloud</h3>
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学术/">学术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文献阅读/">文献阅读</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/站点配置/">站点配置</a><span class="tag-list-count">1</span></li></ul>
+                </canvas>
+            </div>
+        </div>
+        
 
     </div>
   </aside>
