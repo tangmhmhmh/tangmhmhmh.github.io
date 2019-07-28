@@ -7,7 +7,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/28/最大熵逆向强化学习/fig3_成本值.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/07/28/最大熵逆向强化学习/fig4_目标规划能力.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/07/28/最大熵逆向强化学习/预测准确度.PNG">
-<meta property="og:updated_time" content="2019-07-28T11:30:40.000Z">
+<meta property="og:updated_time" content="2019-07-28T12:11:51.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大熵逆向强化学习">
 <meta name="twitter:description" content="Ziebart B D, Maas A, Bagnell J A, et al. Maximum entropy inverse reinforcement learning[J]. 2008.  作者信息    作者 学校/机构     Brian D. Ziebart 卡内基梅隆大学计算机科学学院   Andrew Maas 卡内基梅隆大学计算机科学学院   J.Andrew Bagnell">
@@ -132,7 +132,7 @@
 
 
 
-  <title>最大熵逆向强化学习 | 没什么技术的技术博客</title>
+  <title>最大熵逆向强化学习 | 没什么技术的技术博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -151,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -417,9 +417,9 @@
 <p>在模拟学习中，我们采用完全概率的方法来推理不确定性。在匹配被证明行为的奖励值的约束下，利用最大熵原理解决了在选择分配时的模糊性。为确定性MDPs的学习和推理提供了有效的算法。我们依赖一个额外的简化假设来使关于非确定性MDPs的推理变得易于处理。所得到的分布是一个概率模型，它对行为进行全局规范化，可以理解为链条件随机场的扩展，它包含了规划系统的动态，并扩展到无限的视界(The resulting distribution is a probabilistic model that normalizes globally over behaviors and can be understood as an extension to chain conditional random fields that incorporates the dynamics of the planning system and extends to the infinite horizon.)。</p>
 <p>我们的研究工作的动机是建模驾驶员的实际路线首选项的问题。我们利用收集到的10万英里出租车驾驶GPS数据，将我们的方法应用于路径偏好建模，其中世界的结构(即，即道路网络)是已知的，以及可采取的行动(即，以道路特征(例如车速限制、行车线数目)为特征。与许多模仿学习技术形成鲜明对比的是，我们的有目的行为概率模型与包括隐变量技术在内的其他概率方法无缝集成。这允许我们扩展我们的路线偏好，隐藏目标，以自然推断未来的路线和目的地的部分轨迹。</p>
 <p>一个关键的问题是，演示的行为容易产生噪音和不完美的行为。最大熵方法提供了一种处理这种不确定性的原则方法。我们讨论了该技术相对于现有的反向强化学习方法(Ratliff, Bagnell， &amp; Zinkevich 2006)和相对于每个状态可用操作的局部规范化方法(Ramachandran &amp; Amir 2007;Neu &amp; Szepesvri 2007)。</p>
-<h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>在模仿学习环境中，agent的行为(即,其轨迹或路径,$ζ$、状态$s<em>i$和行为$a_i$)在一些规划空间由学习者试图观察模型或模仿代理。假设agent试图优化一些函数，$f</em>{s<em>j}\in{R^k}$，这些函数是每个状态的特征和状态奖励值的线性映射，奖励值表示agent达到该状态的有用性。这些函数通过奖励权重系数$\theta$优化。轨迹的奖励值仅仅是状态奖励的和，或者等价地，应用于路径特征的奖励权重计数，$f</em>ζ=\sum<em>{s_j\in{ζ}}f</em>{s_j}$,其为沿路径的状态特征值之和。</p>
+<h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><p>在模仿学习环境中，agent的行为(即,其轨迹或路径,$ζ$、状态$s_i$和行为$a_i$)在一些规划空间由学习者试图观察模型或模仿代理。假设agent试图优化一些函数，$f_{s_j}\in{R^k}$，这些函数是每个状态的特征和状态奖励值的线性映射，奖励值表示agent达到该状态的有用性。这些函数通过奖励权重系数$\theta$优化。轨迹的奖励值仅仅是状态奖励的和，或者等价地，应用于路径特征的奖励权重计数，$f_ζ=\sum_{s_j\in{ζ}}f_{s_j}$,其为沿路径的状态特征值之和。</p>
 <script type="math/tex; mode=display">
-reward(f_ζ)=\theta^Tf_ζ=\sum_{s_j\inζ}\theta^Tf_{s_j}</script><p>根据很多(m个)轨迹，agent可以演示单一轨迹，$\tilde{ζ}<em>i$，并具有预期的经验特征数量$\tilde{f}=\frac{1}{m}\sum_if</em>{\tilde{ζ}_i}$</p>
+reward(f_ζ)=\theta^Tf_ζ=\sum_{s_j\inζ}\theta^Tf_{s_j}</script><p>根据很多(m个)轨迹，agent可以演示单一轨迹，$\tilde{ζ}_i$，并具有预期的经验特征数量$\tilde{f}=\frac{1}{m}\sum_if_{\tilde{ζ}_i}$</p>
 <p>恢复agent的确切奖励权重是一个不明智的问题;许多奖励权重，包括退化（例如，全零），使得演示的轨迹最佳。Ratliff，Bagnell和Zinkevich（2006）将此问题作为结构化最大边际预测（MMP）之一。他们考虑了一类损失函数，这些函数直接测量代理和已学习策略之间的差异，然后使用结构化边际方法有效地学习基于此损失的凸松弛的奖励函数，并且只需要oracle访问MDP求解器。然而，当没有单一的奖励函数使得证明的行为既优化又明显优于任何替代行为时，该方法存在一些显着的缺点。例如，当代理所演示的行为不完美，或者规划算法只捕获了相关状态空间的一部分，而不能完美地描述所观察到的行为时，这种情况经常发生。</p>
 <p>Abbeel＆Ng（2004）提供了一种基于逆向强化学习（IRL）的替代方法（Ng＆Russell 2000）。作者提出了一种在观察到的策略和学习者行为之间匹配特征期望（等式1）的策略;他们证明了这种匹配对于实现与agent相同的性能是必要和充分的，如果代理实际上在这些特征中解决了具有线性奖励函数的MDP。</p>
 <script type="math/tex; mode=display">
@@ -447,21 +447,21 @@ P(action a|\theta,T)\propto\sum_{ζ:a\in{ζ_{t=0}}}P(ζ|\theta,T)\tag{5}</script
 <ol>
 <li><p>令$Z_{s_i,0}=1$</p>
 </li>
-<li><p>$Z<em>{a</em>{i,j}}=\sum<em>k P(s_k|s_i,a</em>{i,j}) e^{reward(s<em>i| \theta)}Z</em>{s_k}$</p>
+<li><p>$Z_{a_{i,j}}=\sum_k P(s_k|s_i,a_{i,j}) e^{reward(s_i| \theta)}Z_{s_k}$</p>
 <p>递归计算N次迭代</p>
-<p>$Z<em>{s_i}=\sum</em>{a<em>{i,j}}Z</em>{a_{i,j}}$</p>
+<p>$Z_{s_i}=\sum_{a_{i,j}}Z_{a_{i,j}}$</p>
 <p>局部动作概率计算</p>
 </li>
-<li><p>$P(a<em>{i,j}| s_i)=\frac{Z</em>{a{i,j}}}{Z_{s_a}}$</p>
+<li><p>$P(a_{i,j}| s_i)=\frac{Z_{a{i,j}}}{Z_{s_a}}$</p>
 <p>前向传递</p>
 </li>
-<li><p>令$D<em>{s_i,t}=P(s_i=s</em>{initial})$</p>
+<li><p>令$D_{s_i,t}=P(s_i=s_{initial})$</p>
 </li>
 <li><p>递归地计算t = 1到N</p>
-<p>$D<em>{s_i,t+1}=\sum</em>{a<em>{i,j}}\sum_k D</em>{s<em>k,t|s_i}P(a</em>{i,j})P(s<em>k|a</em>{i,j},s_i)$</p>
+<p>$D_{s_i,t+1}=\sum_{a_{i,j}}\sum_k D_{s_k,t|s_i}P(a_{i,j})P(s_k|a_{i,j},s_i)$</p>
 <p>累加频率</p>
 </li>
-<li><p>$D<em>{s_i}=\sum_t D</em>{s_i,t}$</p>
+<li><p>$D_{s_i}=\sum_t D_{s_i,t}$</p>
 </li>
 </ol>
 <p>相反，我们的算法使用一种类似于条件随机域的前向-后向算法或强化学习中的值迭代的技术，有效地计算期望状态占用频率。该算法利用一个大的固定时间域逼近无限时间域的状态频率。它递归地从每个可能的终端状态“备份”(步骤1)，并通过计算方程4在每个动作和状态下的配分函数计算与每个分支关联的概率质量(步骤2)。这些分支值产生局部动作概率(步骤3)，从这些局部动作概率中可以计算出每个时间步骤中的状态频率(步骤4和步骤5)，并对总的状态频率计数求和(步骤6)。</p>
@@ -1028,7 +1028,7 @@ P(dest|\tildeζ_{A\rightarrow B})\propto P(\tildeζ_{A\rightarrow B}|dest)P(dest
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
