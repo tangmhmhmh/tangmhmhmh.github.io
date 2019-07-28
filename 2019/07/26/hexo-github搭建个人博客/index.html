@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/26/hexo-github搭建个人博客/github.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/07/26/hexo-github搭建个人博客/ssh.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/07/26/hexo-github搭建个人博客/ssh_key.PNG">
-<meta property="og:updated_time" content="2019-07-27T13:30:06.000Z">
+<meta property="og:updated_time" content="2019-07-28T12:38:06.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-Github搭建个人博客">
 <meta name="twitter:description" content="转载自http://visugar.com/2017/05/04/20170504SetUpHexoBlog/，并加了一些其他东西。 前期准备前期准备主要时安装三个东西：git bash、NodeJs、hexo git bash安装git bash 直接下载安装即可，下载地址：https://gitforwindows.org/  一路next就完事了 NodeJs安装Hexo是基于nodeJS环">
@@ -433,6 +433,8 @@
 <h2 id="正常渲染公式"><a href="#正常渲染公式" class="headerlink" title="正常渲染公式"></a>正常渲染公式</h2><ol>
 <li><p>更新公式选然引擎</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p>再安装一个自动部署MathJax的hexo插件。安装方式也很简单，在博客文件夹下执行：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-math --save</span><br><span class="line">hexo math install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件</p>
 <p>目标文件：<strong>node_modules\kramed\lib\rules\inline.js</strong></p>
